@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get" onsubmit="" name="forma" id="forma">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre"><br>
+        <label for="apellido">Apellido:</label><br>
+        <input type="text" id="apellido" name="apellido"><br>
+        <label for="telefono">Telefono:</label><br>
+        <input type="text" id="telefono" name="telefono"><br>
+        <label for="DUI">DUI:</label><br>
+        <input type="text" id="DUI" name="DUI"><br>
+        <label for="correo">Correo:</label><br>
+        <input type="text" id="correo" name="correo"><br><br>
+        <input type="submit" id="enter" onclick="clickable()" value="ENTRAR"><br>
+    </form>
+</body>
+</html>
+<script>
+    function clickable(){
+        var name = document.getElementById("nombre").value;
+        var apell = document.getElementById("apellido").value;
+        var tel = document.getElementById("telefono").value;
+        var idnum = document.getElementById("DUI").value;
+        var email = document.getElementById("correo").value;
+        console.log("Nombre: "+name +" "+ apell +"\n Telefono: "+ tel+"\n DUI: "+ idnum +"\n Correo: "+ email);
+    }
+</script>

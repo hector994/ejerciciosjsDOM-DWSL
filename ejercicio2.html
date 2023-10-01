@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+input[type="text"]{
+    background-color: rgb(203, 207, 196);
+}
+#coloredInput{
+    background-color: cyan;
+    padding: 10px 15px;
+    border-radius: 3px;
+}
+</style>
+<body>
+    <form action="" method="get">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre"  oninput="changeNombre()"><br>        
+        <label for="DUI">DUI:</label><br>
+        <input type="text" id="DUI" name="DUI" oninput="changeDUI()"><br>
+        <label for="fecha">Fecha de nacimiento:</label><br>
+        <input type="text" id="fecha" name="fecha" oninput="changeFecha()"><br>
+        <label for="genero">Genero:</label><br>
+        <input type="text" id="genero" name="genero" oninput="changeGenero()"><br>
+        <label for="departamento">Departamento:</label><br>
+        <input type="text" id="departamento" name="departamento" oninput="changeDepartamento()"><br><br>
+        <input type="submit" id="enter" onclick="clickable()" value="ENTRAR"><br>
+    </form>
+</body>
+</html>
+<script>
+function changeNombre() {
+    var nombre = document.getElementById("nombre");
+    if (nombre.value === '') {
+        nombre.style.backgroundColor = 'rgb(203, 207, 196)';
+    } else {
+        nombre.style.backgroundColor = 'white';
+    }    
+}
+function changeDUI() {
+    var nombre = document.getElementById("DUI");
+    if (nombre.value === '') {
+        nombre.style.backgroundColor = 'rgb(203, 207, 196)';
+    } else {
+        nombre.style.backgroundColor = 'white';
+    }    
+}
+function changeFecha() {
+    var nombre = document.getElementById("fecha");
+    if (nombre.value === '') {
+        nombre.style.backgroundColor = 'rgb(203, 207, 196)';
+    } else {
+        nombre.style.backgroundColor = 'white';
+    }    
+}
+function changeGenero() {
+    var nombre = document.getElementById("genero");
+    if (nombre.value === '') {
+        nombre.style.backgroundColor = 'rgb(203, 207, 196)';
+    } else {
+        nombre.style.backgroundColor = 'white';
+    }    
+}
+function changeDepartamento() {
+    var nombre = document.getElementById("departamento");
+    if (nombre.value === '') {
+        nombre.style.backgroundColor = 'rgb(203, 207, 196)';
+    } else {
+        nombre.style.backgroundColor = 'white';
+    }    
+}
+
+const input = document.getElementById('nombre');
+
+input.addEventListener('input', event => {
+  if (input.value === '') {
+    input.style.backgroundColor = 'rgb(203, 207, 196)';
+  } else {
+    input.style.backgroundColor = 'lime';
+  }
+});
+
+
+</script>

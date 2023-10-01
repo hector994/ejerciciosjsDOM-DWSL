@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get" onsubmit="myFunction()" name="seleccion" id="seleccion">
+        <label for="departamento">Departamento:</label><br>
+        <select id="departamento" name="departamento" onchange="selectionDepartamento()">
+            <option selected disabled>Selecciona tu departamento</option>
+            <option>San Miguel</option>
+            <option>Usulutan</option>
+            <option>La Union</option>
+            <option>Morazan</option>
+          </select><br>
+        <label for="genero">Genero:</label><br>
+        <select id="genero" name="genero" onchange="selectionGenero()">
+            <option selected disabled>Selecciona tu genero</option>
+            <option>Masculino</option>
+            <option>Femenino</option>
+          </select><br>
+        <label for="educacion">Educacion:</label><br>
+        <select id="educacion" name="educacion" onchange="selectionEducacion()">
+            <option selected disabled>Seleccione su nivel educativo</option>
+            <option>Bachiller</option>
+            <option>Licenciatura</option>
+            <option>Ingenieria</option>
+            <option>Doctorado</option>
+            <option>Master</option>
+            <option>Pregrado</option>
+            <option>Postgrado</option>
+          </select>
+          <input type="submit" value="enviar"> 
+    </form>
+</body>
+</html>
+<script>
+function myFunction() {
+    var x = document.getElementById("departamento");
+    var optionx = document.createElement("option");
+    optionx.text = "Selecciona tu departamento";
+    x.add(optionx, x[0]);
+
+    var y = document.getElementById("genero");
+    var optiony = document.createElement("option");
+    optiony.text = "Selecciona tu genero";
+    y.add(optiony, y[0]);
+
+    var z = document.getElementById("educacion");
+    var optionz = document.createElement("option");
+    optionz.text = "Selecciona tu educacion";
+    z.add(optionz, z[0]);
+}
+
+function selectionDepartamento(){
+    var x = document.getElementById("departamento");
+    var optionDepart = x.options[x.selectedIndex].text;
+    console.log(optionDepart);
+    x.remove(0); 
+}
+function selectionGenero(){
+    var y = document.getElementById("genero");
+    var optionGend = y.options[y.selectedIndex].text;
+    console.log(optionGend);
+    y.remove(0); 
+}
+function selectionEducacion(){
+    var z = document.getElementById("educacion");
+    var optionEducation = z.options[z.selectedIndex].text;
+    console.log(optionEducation);
+    z.remove(0); 
+}
+</script>
